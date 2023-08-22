@@ -1,0 +1,2 @@
+# mceditorial
+Macarte editorial pages
