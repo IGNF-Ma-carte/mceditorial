@@ -1,7 +1,0 @@
-{
-    "server": "http://localhost/macarte-api/",
-    "doc": "http://localhost:1234?",
-    "faq": "http://localhost:1234/faq.html?categorie=$CATEGORIE&article=$ARTICLE",    
-    "tuto" : "http://localhost:1234/tuto.html?article=$ARTICLE",
-    "version" : "http://localhost:1234/version.html?article=$ARTICLE"
-}
