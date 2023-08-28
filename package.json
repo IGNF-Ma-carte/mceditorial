@@ -1,5 +1,5 @@
 {
-  "name": "editorial",
+  "name": "mceditorial",
   "version": "1.0.0",
   "description": "Affichage des articles",
   "main": "index.js",
