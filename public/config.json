@@ -1,0 +1,8 @@
+{
+    "server": "https://macarte-qualif.ign.fr/",
+    "documentation": "./?categorie=$CATEGORIE&article=$ARTICLE",
+    "version": "./?page=version&categorie=$CATEGORIE&article=$ARTICLE",
+    "faq": "./?page=faq&categorie=$CATEGORIE&article=$ARTICLE",
+    "tuto": "./?page=tuto&categorie=$CATEGORIE&article=$ARTICLE"
+}
+  

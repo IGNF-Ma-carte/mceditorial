@@ -1,0 +1,109 @@
+[data-role="content"] h1,
+#head {
+    display: none;
+}
+
+[data-article="none"] {
+    [data-role="content"] h1, #head {
+        display: block;
+    }
+}
+[data-role="content"] {
+    padding-top: 5rem!important;
+    max-width: 130rem;
+    margin: auto;
+
+    .list{
+        position: sticky;
+        top: 5em;
+        display: inline-block;
+        width: calc(20% - 1em);
+        margin-right: 1em;
+        box-sizing: border-box;
+        vertical-align: top;
+        list-style: none;
+        padding: 0;
+        border-right: 1px solid #dde1e6 ;
+        
+        //niveau categories
+        &>li{
+            text-align: right;
+            padding: 1.5rem 3rem 1.5rem 0;
+            cursor: pointer;
+            font-weight: 800;
+            border-right: 5px solid transparent;
+            color: #788089;
+
+            ul[data-category]{
+                position: relative;
+                list-style: none;
+                padding: 0;
+
+                //niveau titre de article
+                li{
+                    text-align: right;
+                    margin-right: calc(-4rem + 5px);
+                    margin-top: 1em;
+                    padding-right: 3rem;
+                    // padding: 0.5rem 3rem 0.5rem 1rem;
+                    // color: #3993f3;
+                    font-weight: initial;
+                    // display: flex;
+                    align-items: center;
+                    &.colored {
+                        font-weight: 500;
+                        color: #3993f3;
+                        border-right: 5px solid currentColor;
+                    }
+                    &:hover{
+                        color: #3993f3;
+                        background-color: #e1eefd;
+                    }
+                    img{
+                        width: 1.5em;
+                        height: 1.5em;
+                        margin-right: 0.5em;
+                        position: relative;
+                        vertical-align: middle;
+                    }
+                    // border-left: 1px solid #dde1e6;
+                    // // border-right: 1px solid #dde1e6;
+                    // border-top: 1px solid #dde1e6;
+                    // &:last-child{
+                    //     border-bottom: 1px solid #dde1e6;
+                    // }
+
+                }
+            } 
+
+        }
+    }
+
+    .content{
+        position: relative;
+        display: inline-block;
+        width: 80%;
+        box-sizing: border-box;
+        vertical-align: top;
+
+        .gray{
+            color: #788089;
+        }
+        img{
+            max-width: 100%;
+        }
+    }
+
+    &.list-hidden{
+        .list{
+            display: none;
+        }
+        .content{
+            width: 100%;
+        }
+    }
+
+    .hide{
+        display: none;
+    }
+}
