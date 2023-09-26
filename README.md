@@ -1,6 +1,12 @@
 # mceditorial
 *Macarte editorial pages*
 
+![](https://img.shields.io/github/v/release/IGNF-Ma-carte/mceditorial)
+![](https://img.shields.io/github/stars/IGNF-Ma-carte/mceditorial)
+![](https://img.shields.io/github/commit-activity/m/IGNF-Ma-carte/mceditorial)
+![](https://img.shields.io/github/contributors/IGNF-Ma-carte/mceditorial)
+![](https://img.shields.io/github/license/IGNF-Ma-carte/mceditorial)
+
 Affichage des pages d'éditorial et de documentation Ma carte
 
 ## Installation et développement
