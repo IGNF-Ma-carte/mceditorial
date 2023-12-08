@@ -1,6 +1,6 @@
 {
   "name": "mceditorial",
-  "version": "4.1.0",
+  "version": "4.1.2",
   "description": "Affichage des articles",
   "main": "index.js",
   "scripts": {
