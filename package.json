@@ -19,7 +19,7 @@
     "sass": "^1.54.9"
   },
   "dependencies": {
-    "mcutils": "git+https://github.com/IGNF-Ma-carte/mcutils"
+    "mcutils": "github:IGNF-Ma-carte/mcutils#1.0.4"
   },
   "repository": {
     "type": "git",
