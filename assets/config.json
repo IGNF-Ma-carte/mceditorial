@@ -1,5 +1,5 @@
 {
-    "server": "https://macarte-qualif.ign.fr/",
+    "server": "https://qlf-macarte.ign.fr/",
     "documentation": "./?categorie=$CATEGORIE&article=$ARTICLE",
     "version": "./?page=version&categorie=$CATEGORIE&article=$ARTICLE",
     "faq": "./?page=faq&categorie=$CATEGORIE&article=$ARTICLE",
