@@ -2,8 +2,8 @@ import api from  'mcutils/api/api';
 import ol_ext_element from 'ol-ext/util/element';
 import md2html from 'mcutils/md/md2html';
 import FlashMessage from 'mcutils/dialog/FlashMessage';
-import loadFonts from 'mcutils/font/loadFonts';
-import serviceUrl, { getMediaURL, encodeTitleURL, getDocumentationURL } from 'mcutils/api/serviceURL';
+import 'mcutils/font/loadFonts';
+import { getMediaURL, encodeTitleURL, getDocumentationURL } from 'mcutils/api/serviceURL';
 
 const contentDiv = document.querySelector('[data-role="content"]');
 
@@ -18,6 +18,11 @@ let currentArticleExists = true;
 
 const articlesArray = {};
 
+let delayTout;
+ol_ext_element.addListener(contentDiv.querySelector('.search input'), ['input', 'keyup'],  e => {
+    clearTimeout(delayTout)
+    delayTout = setTimeout(() => searchArticle(e.target.value), 300)
+})
 
 /**
  * 
@@ -106,10 +111,6 @@ function getParamsFromURL() {
         currentArticleExists = false;
     }
 }
-
-
-
-
 
 // lorsqu'on se déplace dans l'historique
 window.addEventListener('popstate', (e) => {
@@ -272,6 +273,7 @@ function displayArticle(articleId){
 
     ol_ext_element.create('DIV', {
         // html: md2html(article.content, undefined, { shiftTitle: 2, edugeo: isEdugeo }),
+        className: 'article',
         html: md2html(article.content, undefined, { shiftTitle: 2, edugeo: false }),
         parent: contentArticleDiv,
     });
@@ -289,6 +291,21 @@ function getArticleUrlTitle(article){
     const linkText = getDocumentationURL(page, currentCategory.key, title + '_' + article.id);
 
     return linkText;
+}
+
+/* Search an article */
+function searchArticle(text) {
+    const rex = new RegExp(text || '.*', 'i');
+    Object.keys(articlesArray).forEach(k => {
+        const a = articlesArray[k];
+        if (!a.searchStr) a.searchStr = a.title + ' ' + md2html.text(a.content);
+        contentDiv.querySelector('[data-article-id="'+a.id+'"]').setAttribute('aria-hidden', !rex.test(a.searchStr))
+    })
+    contentDiv.querySelectorAll('#articles > ul > li').forEach(li => {
+        const hide = !li.querySelector('[aria-hidden="false"]')
+        li.setAttribute('aria-hidden', hide);
+        if (!hide) li.querySelector('ul').classList.remove('hide')
+    })
 }
 
 export { getParamsFromURL }

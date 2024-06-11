@@ -10,10 +10,30 @@
         display: block;
     }
 }
+
+#articles .search {
+    text-align: right;
+    margin: -.5em 0 .5em;
+    border-bottom: 1px solid #dde1e6;
+    padding-bottom: 1em;
+
+    label {
+        margin-right: 1em;
+        display: inline-block;
+        font-weight: bold;
+    }
+    input[type="search"] {
+        width: calc(80% + 1em);
+    }
+}
 [data-role="content"] {
     padding-top: 5rem!important;
     max-width: 130rem;
     margin: auto;
+
+    [aria-hidden="true"] {
+        display: none;
+    }
 
     .list{
         position: sticky;
@@ -90,6 +110,9 @@
 
         .gray{
             color: #788089;
+        }
+        .article {
+            margin-top: 1em;
         }
         img{
             max-width: 100%;
