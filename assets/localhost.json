@@ -1,5 +1,6 @@
 {
-    "server": "http://localhost/macarte-api/",
+    "server-0": "http://localhost/macarte-api/",
+    "server": "https://qlf-macarte.ign.fr/",
     "doc": "http://localhost:1234?",
     "faq": "http://localhost:1234/faq.html?categorie=$CATEGORIE&article=$ARTICLE",    
     "tuto" : "http://localhost:1234/tuto.html?article=$ARTICLE",
