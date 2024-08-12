@@ -4,6 +4,8 @@ import md2html from 'mcutils/md/md2html';
 import FlashMessage from 'mcutils/dialog/FlashMessage';
 import 'mcutils/font/loadFonts';
 import { getMediaURL, encodeTitleURL, getDocumentationURL } from 'mcutils/api/serviceURL';
+import './i18n.js'
+import _T from 'mcutils/i18n/i18n'
 
 const contentDiv = document.querySelector('[data-role="content"]');
 
@@ -148,9 +150,10 @@ function displayCategories(categories){
             return;
         }
 
+        console.log(category)
         const li = ol_ext_element.create('LI', {
             parent: ul,
-            html: category.value,
+            html: _T(category.key),
             click: (e) => {
                 e.stopPropagation();
                 showCategory(category.key);
