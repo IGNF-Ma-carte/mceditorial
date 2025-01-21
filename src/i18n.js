@@ -6,5 +6,6 @@ i18n.set('fr', {
   "faq_statistic": "Importer des statistiques",
   "faq_mesadresses": "Localiser des adresses",
   "faq_atlas": "Atlas/partage",
+  "faq_organization": "Gérer des équipes",
   "faq_moncompte": "Mon compte",
 })
